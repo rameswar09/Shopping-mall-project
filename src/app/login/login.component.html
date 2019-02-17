@@ -1,0 +1,16 @@
+
+<mat-toolbar class="menu-bar">
+  <span>Shoping Mall</span>
+</mat-toolbar>
+<mat-card class="login-part">
+  <p class="user-login-text">USER LOGIN</p>
+  <form class="example-form">
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="username" (input)="onChangeEmail($event)">
+  </mat-form-field><br/>
+  <mat-form-field class="example-full-width">
+    <input matInput type="password" placeholder="password" (input)="onChangePassword($event)">
+  </mat-form-field>
+</form>
+<a routerLink="/home"><button mat-button class="login" (click)="onClickLogin()">LOGIN</button></a>
+</mat-card>

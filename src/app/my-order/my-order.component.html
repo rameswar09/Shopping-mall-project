@@ -1,0 +1,26 @@
+<div class="menu-bar">
+  <div class="title"><strong>Shoping Mall</strong></div>
+  <div>
+    <a routerLink="/home"><button class="home" mat-button>HOME</button></a>
+  </div>
+</div>
+<div *ngFor="let item of myCart; let i = index" [attr.data-index]="i">
+  <mat-card class="mat-card">
+    <div class="mycart-card">
+      <div class="mycart-card-image">
+        <img class="cart-product-img" src={{item.url}}>
+      </div>
+      <div class="mycart-product-price-section">
+        <div>
+          <strong>Name: </strong><span>{{item.name}}</span>
+        </div>
+        <div>
+          <strong> Total Price: </strong><span>{{item.totalPrice}}</span>
+        </div>
+        <div>
+          <strong>Select quantity: </strong>{{item.quantity}}
+        </div>
+      </div>
+    </div>
+  </mat-card>
+</div>

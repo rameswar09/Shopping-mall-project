@@ -1,0 +1,25 @@
+<div class="menu-bar">
+  <div class="title"><strong>Shoping Mall</strong></div>
+  <div>{{'welcome:'}}{{username}}
+    <a routerLink="/myCart"><img class="cart-image" src={{cartImgUrl}}></a>
+  </div>
+</div>
+<!-- <div class="serach">
+  <input class="search-text" type="text" name="search" placeholder="search"><span><img class="search-icon" src="http://www.clker.com/cliparts/7/C/B/Q/6/n/search-icon-hi.png"></span>
+</div> -->
+<div [ngClass]="{category1:status==='mobile',category2:status==='TVs & Appliances',category3:status==='laptop'}" >
+  <button mat-button (click)="onClickShow('mobile')">MOBILE</button>
+  <button mat-button (click)="onClickShow('TVs & Appliances')">TV</button>
+  <button mat-button (click)="onClickShow('laptop')">LAPTOP</button>
+  <div class="serach">
+  <input class="search-text" type="text" name="search" placeholder="search" (keyup.enter)="onChangeSearch($event)">
+  </div>
+  <div class="all-items">
+    <div class="single-product"*ngFor="let item of showData" (click)="onClick(item)">
+      <img class="product-image-home" src={{item.url}}>
+      <p style="text-align:center">{{item.name}}</p>
+    </div>
+  </div>
+</div>
+
+<app-footer></app-footer>

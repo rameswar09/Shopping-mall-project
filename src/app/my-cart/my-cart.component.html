@@ -1,0 +1,39 @@
+<div class="menu-bar">
+  <div class="title"><strong>Shoping Mall</strong></div>
+  <div>
+    <a routerLink="/home"><button style="color:white" mat-button>HOME</button></a>
+    <a routerLink="/myCart"><img class="cart-image" src={{cartImgUrl}}></a>
+  </div>
+</div>
+<div *ngFor="let item of myCart; let i = index" [attr.data-index]="i">
+  <mat-card class="mat-card">
+    <div class="mycart-card">
+      <div class="mycart-card-image">
+        <img class="cart-product-img" src={{item.url}}>
+      </div>
+      <div class="mycart-product-price-section">
+        <div>
+          <strong>Name: </strong><span>{{item.name}}</span>
+        </div>
+        <div>
+          <strong> Total Price: </strong><span>{{item.totalPrice}}</span>
+        </div>
+        <div>
+          <strong>Select quantity: </strong>
+          <select class="form-select" value={{item.quantity}} (change)="onChange($event,item,i)">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </mat-card>
+</div>
+<div class="checkout=box">
+  <a routerLink="/checkout"><button  class="checkout-button"mat-button (click)="onClickGoToChackout">CHECKOUT</button></a>
+</div>
+<div class="demo-div">
+</div>
+
+<!-- <app-footer></app-footer> -->

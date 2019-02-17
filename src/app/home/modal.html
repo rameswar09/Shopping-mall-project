@@ -1,0 +1,21 @@
+<div class="modal">
+  <div class="modal-product-image">
+    <img class="product-image" src={{data.url}}>
+    <p style="text-align:center">{{data.name}}</p>
+
+  </div>
+  <div class="modal-product-details">
+    <p>{{data.description}}</p>
+    <strong>Select quantity: </strong><mat-form-field>
+  <mat-select [(value)]="select" (change)="onChangeQuantity($event)">
+    <mat-option>None</mat-option>
+    <mat-option value="1">1</mat-option>
+    <mat-option value="2">2</mat-option>
+    <mat-option value="3">3</mat-option>
+  </mat-select>
+</mat-form-field><br/>
+<strong>Price: </strong><span>{{data.price}}</span>
+    <button class="add-to-cart-button" mat-button (click)="onClickAddToCart(data)">ADD TO CART</button>
+  </div>
+
+</div>

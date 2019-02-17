@@ -1,0 +1,47 @@
+<div class="menu-bar">
+  <div class="title"><strong>Shoping Mall</strong></div>
+  <div>
+    <a routerLink="/myOrder"><button class="my-order-button" mat-button>MY ORDER</button></a>
+  </div>
+</div>
+<p class="checkout-text"><strong>CHECKOUT</strong></p><br/><br/>
+<hr/>
+<div class="checkout-details">
+  <div class="account-Information">
+    <h4>Account Information</h4><br/>
+    <div class="example-container">
+  <mat-form-field>
+    <input matInput placeholder="Email">
+  </mat-form-field><br/>
+  <mat-form-field>
+    <input matInput placeholder="Phone">
+  </mat-form-field><br/><br/><br/>
+  <strong>Shipping address</strong><br/>
+  <mat-form-field>
+    <textarea matInput placeholder="adress"></textarea>
+  </mat-form-field><br/>
+  <mat-form-field>
+    <input matInput placeholder="City">
+  </mat-form-field><br/>
+  <mat-form-field>
+    <mat-select placeholder="County">
+      <mat-option value="option">India</mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>
+  </div>
+  <div class="payment-method">
+    <h4>Payment Method</h4><br/>
+    <div class="example-container">
+  <mat-form-field>
+    <input matInput placeholder="Card Holder Number">
+  </mat-form-field><br/>
+  <mat-form-field>
+    <input matInput placeholder="Card Number">
+  </mat-form-field>
+</div><br/><br/><br/>
+<h4>Order Summary</h4><br/>
+<p>Total Price: {{totalPrice}}</p>
+    <button class="place-order-button" mat-button>PLACE ORDER</button>
+  </div>
+</div>
